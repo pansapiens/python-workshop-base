@@ -11,4 +11,4 @@ dependencies:
   - numpy=1.24.2
   # The quatro package on conda-forge currently appears broken
   # Once this is fixed we should install quarto this way
-  # - quarto
+  - quarto

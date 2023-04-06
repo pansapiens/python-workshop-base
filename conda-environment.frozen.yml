@@ -4,6 +4,7 @@ channels:
   - bioconda
   - defaults
 dependencies:
+  - quarto
   - _libgcc_mutex=0.1=conda_forge
   - _openmp_mutex=4.5=2_gnu
   - accessible-pygments=0.0.4=pyhd8ed1ab_0
