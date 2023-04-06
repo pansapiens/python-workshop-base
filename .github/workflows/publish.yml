@@ -17,12 +17,19 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Install Conda environment from conda-environment.frozen.yml
-        uses: mamba-org/provision-with-micromamba@main
+      # - name: Install Conda environment from conda-environment.frozen.yml
+      #   uses: mamba-org/provision-with-micromamba@main
+      #   with:
+      #     environment-file: conda-environment.frozen.yml
+      #     cache-downloads: true
+      #     cache-env: true
+
+      - name: Install Python and Dependencies
+        uses: actions/setup-python@v4
         with:
-          environment-file: conda-environment.frozen.yml
-          cache-downloads: true
-          cache-env: true
+          python-version: '3.10'
+          cache: 'pip'
+      - run: pip install -r requirements.txt
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
