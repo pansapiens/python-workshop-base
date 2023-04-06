@@ -2,46 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://pansapiens.github.io/python-workshop-base/workshop/index.html</loc>
-    <lastmod>2023-04-06T06:43:35.637Z</lastmod>
+    <lastmod>2023-04-06T07:16:51.862Z</lastmod>
   </url>
   <url>
     <loc>https://pansapiens.github.io/python-workshop-base/workshop/halfday.html</loc>
-    <lastmod>2023-04-06T06:43:35.958Z</lastmod>
+    <lastmod>2023-04-06T07:16:52.240Z</lastmod>
   </url>
   <url>
     <loc>https://pansapiens.github.io/python-workshop-base/workshop/fullday.html</loc>
-    <lastmod>2023-04-06T06:43:36.289Z</lastmod>
+    <lastmod>2023-04-06T07:16:52.556Z</lastmod>
   </url>
   <url>
     <loc>https://pansapiens.github.io/python-workshop-base/workshop/modules/intro.html</loc>
-    <lastmod>2023-04-06T06:43:40.136Z</lastmod>
+    <lastmod>2023-04-06T07:16:57.058Z</lastmod>
   </url>
   <url>
     <loc>https://pansapiens.github.io/python-workshop-base/workshop/modules/working_with_data.html</loc>
-    <lastmod>2023-04-06T06:43:50.906Z</lastmod>
+    <lastmod>2023-04-06T07:17:07.766Z</lastmod>
   </url>
   <url>
     <loc>https://pansapiens.github.io/python-workshop-base/workshop/modules/indexing.html</loc>
-    <lastmod>2023-04-06T06:43:59.518Z</lastmod>
+    <lastmod>2023-04-06T07:17:16.539Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pansapiens.github.io/python-workshop-base/workshop/modules/missing_values.html</loc>
+    <lastmod>2023-04-06T07:17:23.073Z</lastmod>
   </url>
   <url>
     <loc>https://pansapiens.github.io/python-workshop-base/workshop/modules/merging_data.html</loc>
-    <lastmod>2023-04-06T06:44:04.288Z</lastmod>
+    <lastmod>2023-04-06T07:17:27.920Z</lastmod>
   </url>
   <url>
     <loc>https://pansapiens.github.io/python-workshop-base/workshop/modules/loops.html</loc>
-    <lastmod>2023-04-06T06:44:07.697Z</lastmod>
+    <lastmod>2023-04-06T07:17:31.422Z</lastmod>
   </url>
   <url>
     <loc>https://pansapiens.github.io/python-workshop-base/workshop/modules/plotting_with_plotnine.html</loc>
-    <lastmod>2023-04-06T06:45:38.106Z</lastmod>
+    <lastmod>2023-04-06T07:19:13.719Z</lastmod>
   </url>
   <url>
     <loc>https://pansapiens.github.io/python-workshop-base/workshop/modules/functions.html</loc>
-    <lastmod>2023-04-06T06:45:42.346Z</lastmod>
+    <lastmod>2023-04-06T07:19:18.116Z</lastmod>
   </url>
   <url>
     <loc>https://pansapiens.github.io/python-workshop-base/workshop/modules/defensive_programming.html</loc>
-    <lastmod>2023-04-06T06:45:45.656Z</lastmod>
+    <lastmod>2023-04-06T07:19:21.482Z</lastmod>
   </url>
 </urlset>
