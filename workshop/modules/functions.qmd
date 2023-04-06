@@ -222,7 +222,7 @@ year --- year for which data is extracted
 all_data --- DataFrame with multi-year data
 ```
 
-***File:***      `~/devel/python-workshop-base/workshops/docs/modules/notebooks/<ipython-input-16-978149c5937c>`
+***File:***      `~/devel/python-workshop-base/workshops/docs/modules/<ipython-input-16-978149c5937c>`
 
 ***Type:***      `function`
 

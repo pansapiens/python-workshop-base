@@ -6,9 +6,9 @@ This is a selection of modules designed for an intensive half-day workshop. Your
 
 ## Sections
 
-* 01 - [Introduction - the basics of Python](notebooks/intro.qmd)
-* 02 - [Data analysis in Python with Pandas](notebooks/working_with_data.qmd)
-* 03 - [Missing Values](notebooks/missing_values.qmd)
-* 04 - [Repetitive tasks with loops](notebooks/loops.qmd)
-* 05 - [Plotting with plotnine (ggplot)](notebooks/plotting_with_plotnine.qmd)
+* 01 - [Introduction - the basics of Python](modules/intro.qmd)
+* 02 - [Data analysis in Python with Pandas](modules/working_with_data.qmd)
+* 03 - [Missing Values](modules/missing_values.qmd)
+* 04 - [Repetitive tasks with loops](modules/loops.qmd)
+* 05 - [Plotting with plotnine (ggplot)](modules/plotting_with_plotnine.qmd)
 

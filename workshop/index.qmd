@@ -4,15 +4,15 @@ Welcome to _Introduction to Python_ !
 
 ## Modules
 
-* 01 - [Introduction - the basics of Python](notebooks/intro.qmd)
-* 02 - [Data analysis in Python with Pandas](notebooks/working_with_data.qmd)
-* 03 - [Indexing and slicing](notebooks/indexing.qmd)
-* 04 - [Missing Values](notebooks/missing_values.qmd)
-* 05 - [Combining DataFrames in Pandas](notebooks/merging_data.qmd)
-* 06 - [Repetitive tasks with loops](notebooks/loops.qmd)
-* 07 - [Plotting with plotnine (ggplot)](notebooks/plotting_with_ggplot.qmd)
-* 08 - [Reusable and modular code with functions](notebooks/functions.qmd)
-* 09 - [Defensive Programming](notebooks/defensive_programming.qmd)
+* 01 - [Introduction - the basics of Python](modules/intro.qmd)
+* 02 - [Data analysis in Python with Pandas](modules/working_with_data.qmd)
+* 03 - [Indexing and slicing](modules/indexing.qmd)
+* 04 - [Missing Values](modules/missing_values.qmd)
+* 05 - [Combining DataFrames in Pandas](modules/merging_data.qmd)
+* 06 - [Repetitive tasks with loops](modules/loops.qmd)
+* 07 - [Plotting with plotnine (ggplot)](modules/plotting_with_plotnine.qmd)
+* 08 - [Reusable and modular code with functions](modules/functions.qmd)
+* 09 - [Defensive Programming](modules/defensive_programming.qmd)
 
 Some of these modules have been adapted from the original versions at 
 [Data Carpentry - Python for Ecologists](http://www.datacarpentry.org/python-ecology-lesson/) 

@@ -110,7 +110,7 @@ Thats roughly `14%` of data contains missing values.
 
 We have used `[]` convension to select subset of data. 
 
-More information about slicing and indexing can be found out [here](indexing.md).
+More information about slicing and indexing can be found out [here](indexing.qmd).
 
 **(axis=1)** is a numpy convention to specify columns. 
 
