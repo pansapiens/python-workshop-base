@@ -5,6 +5,7 @@ channels:
 dependencies:
   - python==3.10
   - jupyterlab=3.6.3
+  - jupyter=1.0.0
   - plotnine=0.10.1
   - pandas=1.4.0
   - numpy=1.24.2
