@@ -97,13 +97,15 @@ print('Their product is:', product_of_inputs, '(this is done outside the functio
 
 1. Change the values of the input arguments in the function and check its output.
 
-2. Try calling the function by giving it the wrong number of arguments (not 2) or not assigning the function call to a variable (no `product_of_inputs =`).
+2. Try calling the function by giving it the wrong number of arguments (not 2).
+
+3. Create your own function that does a simple mathematical operation - you might create an `add(a, b)` function that adds two numbers, or maybe function to calculate the hypotenuse of a right angle triangle, `pythagoras(a, b)`.
 
 ### Bonus challenges
 
-3. Declare a variable inside the function and test to see where it exists (Hint: can you print it from outside the function?).
+4. Declare a variable inside the function and test to see where it exists (Hint: can you print it from outside the function?).
 
-4. Explore what happens when a variable both inside and outside the function have the same name. What happens to the global variable when you change the value of the local variable?
+5. Explore what happens when a variable both inside and outside the function have the same name. What happens to the global variable when you change the value of the local variable?
 
 ## Solutions - Functions
 
