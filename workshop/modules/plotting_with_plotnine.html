@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.306">
+<meta name="generator" content="quarto-1.4.557">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -22,7 +22,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -79,7 +79,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -88,8 +94,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -101,9 +109,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a href="https://www.monash.edu/data-fluency/home" class="navbar-brand navbar-brand-logo">
     <img src="../../workshop/logo.png" alt="Monash Data Fluency" class="navbar-logo">
     </a>
@@ -118,32 +126,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../workshop/index.html" rel="" target="">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link" href="../../workshop/index.html"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../workshop/halfday.html" rel="" target="">
- <span class="menu-text">Half Day Workshop</span></a>
+    <a class="nav-link" href="../../workshop/halfday.html"> 
+<span class="menu-text">Half Day Workshop</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../workshop/fullday.html" rel="" target="">
- <span class="menu-text">Full Day Workshop</span></a>
+    <a class="nav-link" href="../../workshop/fullday.html"> 
+<span class="menu-text">Full Day Workshop</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../workshop/modules/intro.html">Modules</a></li><li class="breadcrumb-item"><a href="../../workshop/modules/plotting_with_plotnine.html">Making Plots With plotnine (aka ggplot)</a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../workshop/modules/intro.html">Modules</a></li><li class="breadcrumb-item"><a href="../../workshop/modules/plotting_with_plotnine.html">Making Plots With plotnine (aka ggplot)</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -152,7 +160,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
@@ -228,7 +236,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -252,12 +260,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#extra-bits-2" id="toc-extra-bits-2" class="nav-link" data-scroll-target="#extra-bits-2">Extra bits 2</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/MonashDataFluency/python-workshop-base/edit/main/workshop/modules/plotting_with_plotnine.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/MonashDataFluency/python-workshop-base/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/MonashDataFluency/python-workshop-base/edit/main/workshop/modules/plotting_with_plotnine.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/MonashDataFluency/python-workshop-base/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../workshop/modules/intro.html">Modules</a></li><li class="breadcrumb-item"><a href="../../workshop/modules/plotting_with_plotnine.html">Making Plots With plotnine (aka ggplot)</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Making Plots With plotnine (aka ggplot)</h1>
 </div>
@@ -272,7 +280,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
+
 </header>
+
 
 <section id="instructor-notes" class="level2">
 <h2 class="anchored" data-anchor-id="instructor-notes">Instructor notes</h2>
@@ -319,31 +329,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>Let’s explore these in detail.</p>
 <p>First, install the <code>pandas</code> and <code>plotnine</code> packages to ensure they are available.</p>
-<div class="cell" data-execution_count="1">
+<div id="0cb02742" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install pandas plotnine</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Requirement already satisfied: pandas in /home/perry/.conda/envs/python-workshop/lib/python3.10/site-packages (1.4.0)
-Requirement already satisfied: plotnine in /home/perry/.conda/envs/python-workshop/lib/python3.10/site-packages (0.10.1)
-Requirement already satisfied: python-dateutil&gt;=2.8.1 in /home/perry/.conda/envs/python-workshop/lib/python3.10/site-packages (from pandas) (2.8.2)
-Requirement already satisfied: pytz&gt;=2020.1 in /home/perry/.conda/envs/python-workshop/lib/python3.10/site-packages (from pandas) (2023.3)
-Requirement already satisfied: numpy&gt;=1.21.0 in /home/perry/.conda/envs/python-workshop/lib/python3.10/site-packages (from pandas) (1.24.2)
-Requirement already satisfied: matplotlib&gt;=3.5.0 in /home/perry/.conda/envs/python-workshop/lib/python3.10/site-packages (from plotnine) (3.7.1)
-Requirement already satisfied: patsy&gt;=0.5.1 in /home/perry/.conda/envs/python-workshop/lib/python3.10/site-packages (from plotnine) (0.5.3)
-Requirement already satisfied: mizani&gt;=0.8.1 in /home/perry/.conda/envs/python-workshop/lib/python3.10/site-packages (from plotnine) (0.8.1)
-Requirement already satisfied: scipy&gt;=1.5.0 in /home/perry/.conda/envs/python-workshop/lib/python3.10/site-packages (from plotnine) (1.10.1)
-Requirement already satisfied: statsmodels&gt;=0.13.2 in /home/perry/.conda/envs/python-workshop/lib/python3.10/site-packages (from plotnine) (0.13.5)
-Requirement already satisfied: cycler&gt;=0.10 in /home/perry/.conda/envs/python-workshop/lib/python3.10/site-packages (from matplotlib&gt;=3.5.0-&gt;plotnine) (0.11.0)
-Requirement already satisfied: kiwisolver&gt;=1.0.1 in /home/perry/.conda/envs/python-workshop/lib/python3.10/site-packages (from matplotlib&gt;=3.5.0-&gt;plotnine) (1.4.4)
-Requirement already satisfied: pillow&gt;=6.2.0 in /home/perry/.conda/envs/python-workshop/lib/python3.10/site-packages (from matplotlib&gt;=3.5.0-&gt;plotnine) (9.4.0)
-Requirement already satisfied: packaging&gt;=20.0 in /home/perry/.conda/envs/python-workshop/lib/python3.10/site-packages (from matplotlib&gt;=3.5.0-&gt;plotnine) (23.0)
-Requirement already satisfied: pyparsing&gt;=2.3.1 in /home/perry/.conda/envs/python-workshop/lib/python3.10/site-packages (from matplotlib&gt;=3.5.0-&gt;plotnine) (3.0.9)
-Requirement already satisfied: contourpy&gt;=1.0.1 in /home/perry/.conda/envs/python-workshop/lib/python3.10/site-packages (from matplotlib&gt;=3.5.0-&gt;plotnine) (1.0.7)
-Requirement already satisfied: fonttools&gt;=4.22.0 in /home/perry/.conda/envs/python-workshop/lib/python3.10/site-packages (from matplotlib&gt;=3.5.0-&gt;plotnine) (4.39.3)
-Requirement already satisfied: palettable in /home/perry/.conda/envs/python-workshop/lib/python3.10/site-packages (from mizani&gt;=0.8.1-&gt;plotnine) (3.3.0)
-Requirement already satisfied: six in /home/perry/.conda/envs/python-workshop/lib/python3.10/site-packages (from patsy&gt;=0.5.1-&gt;plotnine) (1.16.0)</code></pre>
+<pre><code>Requirement already satisfied: pandas in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (2.2.2)
+Requirement already satisfied: plotnine in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (0.13.6)
+Requirement already satisfied: numpy&gt;=1.22.4 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from pandas) (2.0.0)
+Requirement already satisfied: python-dateutil&gt;=2.8.2 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from pandas) (2.9.0.post0)
+Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from pandas) (2024.1)
+Requirement already satisfied: tzdata&gt;=2022.7 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from pandas) (2024.1)
+Requirement already satisfied: matplotlib&gt;=3.7.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from plotnine) (3.9.0)
+Requirement already satisfied: mizani~=0.11.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from plotnine) (0.11.4)
+Requirement already satisfied: scipy&gt;=1.7.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from plotnine) (1.14.0)
+Requirement already satisfied: statsmodels&gt;=0.14.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from plotnine) (0.14.2)
+Requirement already satisfied: contourpy&gt;=1.0.1 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from matplotlib&gt;=3.7.0-&gt;plotnine) (1.2.1)
+Requirement already satisfied: cycler&gt;=0.10 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from matplotlib&gt;=3.7.0-&gt;plotnine) (0.12.1)
+Requirement already satisfied: fonttools&gt;=4.22.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from matplotlib&gt;=3.7.0-&gt;plotnine) (4.53.0)
+Requirement already satisfied: kiwisolver&gt;=1.3.1 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from matplotlib&gt;=3.7.0-&gt;plotnine) (1.4.5)
+Requirement already satisfied: packaging&gt;=20.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from matplotlib&gt;=3.7.0-&gt;plotnine) (24.1)
+Requirement already satisfied: pillow&gt;=8 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from matplotlib&gt;=3.7.0-&gt;plotnine) (10.3.0)
+Requirement already satisfied: pyparsing&gt;=2.3.1 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from matplotlib&gt;=3.7.0-&gt;plotnine) (3.1.2)
+Requirement already satisfied: six&gt;=1.5 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas) (1.16.0)
+Requirement already satisfied: patsy&gt;=0.5.6 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from statsmodels&gt;=0.14.0-&gt;plotnine) (0.5.6)
+
+[notice] A new release of pip is available: 24.1 -&gt; 24.1.1
+[notice] To update, run: pip install --upgrade pip</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="2">
+<div id="e11f7576" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># We run this to suppress various deprecation warnings from plotnine - keeps our notebook cleaner</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> warnings</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">'ignore'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -353,7 +366,7 @@ Requirement already satisfied: six in /home/perry/.conda/envs/python-workshop/li
 <section id="plotting-in-ggplot-style" class="level1">
 <h1>Plotting in ggplot style</h1>
 <p>Let’s set up our working environment with necessary libraries and also load our csv file into data frame called <code>survs_df</code>,</p>
-<div class="cell" data-execution_count="3">
+<div id="1864eb57" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> <span class="op">*</span></span>
@@ -369,42 +382,62 @@ Requirement already satisfied: six in /home/perry/.conda/envs/python-workshop/li
 </ol>
 <section id="introduction-to-plotting" class="level2">
 <h2 class="anchored" data-anchor-id="introduction-to-plotting">Introduction to plotting</h2>
-<div class="cell" data-execution_count="4">
+<div id="c3fb8de3" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>ggplot(survs_df, aes(x<span class="op">=</span><span class="st">'weight'</span>, y<span class="op">=</span><span class="st">'hindfoot_length'</span>)) <span class="op">+</span> geom_point()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="plotting_with_plotnine_files/figure-html/cell-5-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="plotting_with_plotnine_files/figure-html/cell-5-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Let’s see if we can also include information about species and year.</p>
-<div class="cell" data-execution_count="5">
+<div id="297cb831" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>ggplot(survs_df, aes(x<span class="op">=</span><span class="st">'weight'</span>, y<span class="op">=</span><span class="st">'hindfoot_length'</span>,</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    size <span class="op">=</span> <span class="st">'year'</span>)) <span class="op">+</span> geom_point()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="plotting_with_plotnine_files/figure-html/cell-6-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="plotting_with_plotnine_files/figure-html/cell-6-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Notice that we’ve dropped the <code>x=</code> and <code>y=</code> ? These are implied for the first and second argument of <code>aes()</code>.</p>
-<div class="cell" data-execution_count="6">
+<div id="9918ce18" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>ggplot(survs_df, aes(x<span class="op">=</span><span class="st">'weight'</span>, y<span class="op">=</span><span class="st">'hindfoot_length'</span>, </span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    size <span class="op">=</span> <span class="st">'year'</span>, color <span class="op">=</span> <span class="st">'species_id'</span>)) <span class="op">+</span> geom_point()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="plotting_with_plotnine_files/figure-html/cell-7-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="plotting_with_plotnine_files/figure-html/cell-7-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>We can do simple counting plot, to see how many observation (data points) we have for each year for example</p>
-<div class="cell" data-execution_count="7">
+<div id="1fbe2d36" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>ggplot(survs_df, aes(x<span class="op">=</span><span class="st">'year'</span>)) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    geom_bar(stat <span class="op">=</span> <span class="st">'count'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="plotting_with_plotnine_files/figure-html/cell-8-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="plotting_with_plotnine_files/figure-html/cell-8-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Let’s now also color by species to see how many observation we have per species in a given year</p>
-<div class="cell" data-execution_count="8">
+<div id="67231196" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>ggplot(survs_df, aes(x<span class="op">=</span><span class="st">'year'</span>, fill <span class="op">=</span> <span class="st">'species_id'</span>)) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    geom_bar(stat <span class="op">=</span> <span class="st">'count'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="plotting_with_plotnine_files/figure-html/cell-9-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="plotting_with_plotnine_files/figure-html/cell-9-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
@@ -417,7 +450,7 @@ Requirement already satisfied: six in /home/perry/.conda/envs/python-workshop/li
 </section>
 <section id="solutions" class="level2">
 <h2 class="anchored" data-anchor-id="solutions">Solutions</h2>
-<div class="cell" data-tags="[&quot;solution&quot;]" data-execution_count="9">
+<div id="7ec4a88e" class="cell" data-tags="[&quot;solution&quot;]" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Part 1</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co"># We convert site_id into a categorical column.</span></span>
@@ -428,61 +461,85 @@ Requirement already satisfied: six in /home/perry/.conda/envs/python-workshop/li
 <span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>ggplot(survs_df, aes(x<span class="op">=</span><span class="st">'site_id'</span>, fill <span class="op">=</span> <span class="st">'species_id'</span>)) <span class="op">\</span></span>
 <span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> geom_bar(stat<span class="op">=</span><span class="st">'count'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="plotting_with_plotnine_files/figure-html/cell-10-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="plotting_with_plotnine_files/figure-html/cell-10-output-1.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
-<div class="cell" data-tags="[&quot;solution&quot;]" data-execution_count="10">
+</div>
+<div id="2d35145c" class="cell" data-tags="[&quot;solution&quot;]" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Part 2</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>ggplot(survs_df, aes(x<span class="op">=</span><span class="st">'species_id'</span>, y<span class="op">=</span><span class="st">'hindfoot_length'</span>)) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    geom_boxplot() <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    theme(axis_text_x <span class="op">=</span> element_text(angle<span class="op">=</span><span class="dv">90</span>, hjust<span class="op">=</span><span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="plotting_with_plotnine_files/figure-html/cell-11-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="plotting_with_plotnine_files/figure-html/cell-11-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
 <section id="more-geom-types" class="level2">
 <h2 class="anchored" data-anchor-id="more-geom-types">More geom types</h2>
-<div class="cell" data-execution_count="11">
+<div id="4e48089b" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>ggplot(survs_df, aes(x<span class="op">=</span><span class="st">'year'</span>, y<span class="op">=</span><span class="st">'weight'</span>)) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    geom_boxplot()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="plotting_with_plotnine_files/figure-html/cell-12-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="plotting_with_plotnine_files/figure-html/cell-12-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Why are we not seeing mulitple boxplots, one for each year? This is because year variable is continuous in our data frame, but for this purpose we want it to be categorical.</p>
-<div class="cell" data-execution_count="12">
+<div id="48cced26" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>survs_df[<span class="st">'year_fact'</span>] <span class="op">=</span> survs_df[<span class="st">'year'</span>].astype(<span class="st">"category"</span>)</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>ggplot(survs_df, aes(x<span class="op">=</span><span class="st">'year_fact'</span>, y<span class="op">=</span><span class="st">'weight'</span>)) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    geom_boxplot()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="plotting_with_plotnine_files/figure-html/cell-13-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="plotting_with_plotnine_files/figure-html/cell-13-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>You’ll notice the x-axis labels are overlapped. To flip them 90-degrees we can apply a <code>theme</code> so they look less cluttered. We will revisit themes later.</p>
-<div class="cell" data-execution_count="13">
+<div id="7a2e5b75" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>ggplot(survs_df, aes(x<span class="op">=</span><span class="st">'year_fact'</span>, y<span class="op">=</span><span class="st">'weight'</span>)) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    geom_boxplot() <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    theme(axis_text_x <span class="op">=</span> element_text(angle<span class="op">=</span><span class="dv">90</span>, hjust<span class="op">=</span><span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="plotting_with_plotnine_files/figure-html/cell-14-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="plotting_with_plotnine_files/figure-html/cell-14-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>To save some typing, let’s define this x-axis label rotating theme as a short variable name that we can reuse:</p>
-<div class="cell" data-execution_count="14">
+<div id="13973710" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>flip_xlabels <span class="op">=</span> theme(axis_text_x <span class="op">=</span> element_text(angle<span class="op">=</span><span class="dv">90</span>, hjust<span class="op">=</span><span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="15">
+<div id="e1d85b29" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>ggplot(survs_df, aes(x<span class="op">=</span><span class="st">'year_fact'</span>, y<span class="op">=</span><span class="st">'weight'</span>)) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    geom_violin() <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    flip_xlabels</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="plotting_with_plotnine_files/figure-html/cell-16-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="plotting_with_plotnine_files/figure-html/cell-16-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>To save an image for later:</p>
-<div class="cell" data-execution_count="16">
+<div id="c817d94b" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>plt1 <span class="op">=</span> ggplot(survs_df, aes(x<span class="op">=</span><span class="st">'year_fact'</span>, y<span class="op">=</span><span class="st">'weight'</span>)) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>           geom_boxplot() <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>           xlab(<span class="st">"Years"</span>) <span class="op">+</span> <span class="op">\</span></span>
@@ -505,7 +562,7 @@ Requirement already satisfied: six in /home/perry/.conda/envs/python-workshop/li
 </section>
 <section id="solution" class="level2">
 <h2 class="anchored" data-anchor-id="solution">Solution</h2>
-<div class="cell" data-tags="[&quot;solution&quot;]" data-execution_count="17">
+<div id="dc69c6c6" class="cell" data-tags="[&quot;solution&quot;]" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>survs_df[<span class="st">'weight_log'</span>] <span class="op">=</span> np.log2(survs_df[<span class="st">'weight'</span>])</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>ggplot(survs_df, aes(x<span class="op">=</span><span class="st">'year_fact'</span>, y<span class="op">=</span><span class="st">'weight_log'</span>)) <span class="op">+</span> <span class="op">\</span></span>
@@ -515,31 +572,43 @@ Requirement already satisfied: six in /home/perry/.conda/envs/python-workshop/li
 <span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>    ggtitle(<span class="st">"Boxplots, summary of species wieght in each year"</span>) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>    theme(axis_text_x <span class="op">=</span> element_text(angle<span class="op">=</span><span class="dv">90</span>, hjust<span class="op">=</span><span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="plotting_with_plotnine_files/figure-html/cell-18-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="plotting_with_plotnine_files/figure-html/cell-18-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
 <section id="faceting" class="level2">
 <h2 class="anchored" data-anchor-id="faceting">Faceting</h2>
 <p>ggplot has a special technique called <em>faceting</em> that allows to split one plot into multiple plots based on a factor included in the dataset. We will use it to make one plot for a time series for each species.</p>
-<div class="cell" data-execution_count="18">
+<div id="2975636c" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>ggplot(survs_df, aes(x<span class="op">=</span><span class="st">'year_fact'</span>, y<span class="op">=</span><span class="st">'weight'</span>)) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    geom_boxplot() <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    facet_wrap([<span class="st">'sex'</span>]) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    flip_xlabels <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    theme(axis_text_x <span class="op">=</span> element_text(size<span class="op">=</span><span class="dv">6</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="plotting_with_plotnine_files/figure-html/cell-19-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="plotting_with_plotnine_files/figure-html/cell-19-output-1.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
-<div class="cell" data-execution_count="19">
+</div>
+<div id="b7d1bf4a" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>ggplot(survs_df, aes(x<span class="op">=</span><span class="st">'year_fact'</span>, y<span class="op">=</span><span class="st">'weight'</span>)) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>    geom_boxplot() <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    theme(axis_text_x <span class="op">=</span> element_text(size<span class="op">=</span><span class="dv">4</span>)) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    facet_wrap([<span class="st">'species_id'</span>]) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>    flip_xlabels</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="plotting_with_plotnine_files/figure-html/cell-20-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="plotting_with_plotnine_files/figure-html/cell-20-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>The two faceted plots above are probably easier to interpret using the <code>weight_log</code> column we created - give it a try !</p>
@@ -559,16 +628,20 @@ Requirement already satisfied: six in /home/perry/.conda/envs/python-workshop/li
 <h2 class="anchored" data-anchor-id="theming">Theming</h2>
 <p><code>plotnine</code> allows pre-defined ‘themes’ to be applied as aesthetics to the plot.</p>
 <p>A list available theme you may want to experiment with is here: https://plotnine.readthedocs.io/en/stable/api.html#themes</p>
-<div class="cell" data-execution_count="20">
+<div id="02a870ed" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>ggplot(survs_df, aes(x<span class="op">=</span><span class="st">'year_fact'</span>, y<span class="op">=</span><span class="st">'weight'</span>)) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    geom_boxplot() <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>    theme_bw() <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>    flip_xlabels</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="plotting_with_plotnine_files/figure-html/cell-21-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="plotting_with_plotnine_files/figure-html/cell-21-output-1.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
-<div class="cell" data-execution_count="21">
+</div>
+<div id="1cb34e58" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>ggplot(survs_df, aes(x<span class="op">=</span><span class="st">'year_fact'</span>, y<span class="op">=</span><span class="st">'weight_log'</span>)) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    geom_boxplot() <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>    facet_wrap([<span class="st">'species_id'</span>]) <span class="op">+</span> <span class="op">\</span></span>
@@ -1807,194 +1880,21 @@ findfont: Font family 'Humor Sans' not found.
 findfont: Font family 'Comic Sans MS' not found.
 findfont: Font family 'xkcd' not found.
 findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
-findfont: Font family 'Comic Sans MS' not found.
-findfont: Font family 'xkcd' not found.
-findfont: Font family 'Humor Sans' not found.
 findfont: Font family 'Comic Sans MS' not found.</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="plotting_with_plotnine_files/figure-html/cell-22-output-2.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="plotting_with_plotnine_files/figure-html/cell-22-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
 <section id="extra-bits-1" class="level2">
 <h2 class="anchored" data-anchor-id="extra-bits-1">Extra bits 1</h2>
 <p>Let’s try to bin years into decades, which could be crude but might gives simple images to look at.</p>
-<div class="cell" data-execution_count="22">
+<div id="abb1a46e" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>bins <span class="op">=</span> [(survs_df[<span class="st">'year'</span>] <span class="op">&lt;</span> <span class="dv">1980</span>),</span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>        (survs_df[<span class="st">'year'</span>] <span class="op">&lt;</span> <span class="dv">1990</span>),</span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>        (survs_df[<span class="st">'year'</span>] <span class="op">&lt;</span> <span class="dv">2000</span>),</span>
@@ -2002,31 +1902,39 @@ findfont: Font family 'Comic Sans MS' not found.</code></pre>
 <span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>labels <span class="op">=</span> [<span class="st">'70s'</span>, <span class="st">'80s'</span>, <span class="st">'90s'</span>, <span class="st">'Z'</span>]</span>
 <span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>survs_df[<span class="st">'year_bins'</span>] <span class="op">=</span> np.select(bins, labels)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>survs_df[<span class="st">'year_bins'</span>] <span class="op">=</span> np.select(bins, labels, default<span class="op">=</span><span class="st">'unknown'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="23">
+<div id="b0448046" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>plt2 <span class="op">=</span> ggplot(survs_df, aes(x<span class="op">=</span><span class="st">'year_bins'</span>, y<span class="op">=</span><span class="st">'weight_log'</span>)) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>           geom_boxplot()</span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>plt2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="plotting_with_plotnine_files/figure-html/cell-24-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="plotting_with_plotnine_files/figure-html/cell-24-output-1.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
-<div class="cell" data-execution_count="24">
+</div>
+<div id="ac0de6fd" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>plt2 <span class="op">=</span> ggplot(survs_df, aes(x<span class="op">=</span><span class="st">'year_bins'</span>, y<span class="op">=</span><span class="st">'weight_log'</span>)) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>           geom_boxplot() <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>           flip_xlabels <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>           facet_wrap([<span class="st">'species_id'</span>])</span>
 <span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>plt2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="plotting_with_plotnine_files/figure-html/cell-25-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="plotting_with_plotnine_files/figure-html/cell-25-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
 <section id="extra-bits-2" class="level2">
 <h2 class="anchored" data-anchor-id="extra-bits-2">Extra bits 2</h2>
 <p>This is a different way to look at your data</p>
-<div class="cell" data-execution_count="25">
+<div id="3892ae6a" class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>ggplot(survs_df, aes(<span class="st">"year_fact"</span>, <span class="st">"weight"</span>)) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>    stat_summary(fun_y <span class="op">=</span> np.mean, fun_ymin<span class="op">=</span>np.<span class="bu">min</span>, fun_ymax<span class="op">=</span>np.<span class="bu">max</span>) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>    theme(axis_text_x <span class="op">=</span> element_text(angle<span class="op">=</span><span class="dv">90</span>, hjust<span class="op">=</span><span class="dv">1</span>))</span>
@@ -2039,7 +1947,11 @@ findfont: Font family 'Comic Sans MS' not found.</code></pre>
 <span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a>    stat_summary(fun_y <span class="op">=</span> np.mean, fun_ymin<span class="op">=</span>np.<span class="bu">min</span>, fun_ymax<span class="op">=</span>np.<span class="bu">max</span>) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a>    theme(axis_text_x <span class="op">=</span> element_text(angle<span class="op">=</span><span class="dv">90</span>, hjust<span class="op">=</span><span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="plotting_with_plotnine_files/figure-html/cell-26-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="plotting_with_plotnine_files/figure-html/cell-26-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 
@@ -2127,10 +2039,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/pansapiens\.github\.io\/python-workshop-base\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -2140,8 +2069,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -2153,7 +2091,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -2197,6 +2258,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -2222,6 +2284,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -2285,4 +2373,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/MonashDataFluency/python-workshop-base/edit/main/workshop/modules/plotting_with_plotnine.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/MonashDataFluency/python-workshop-base/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

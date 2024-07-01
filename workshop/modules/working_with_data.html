@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.306">
+<meta name="generator" content="quarto-1.4.557">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -22,7 +22,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -57,7 +57,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -79,7 +79,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -88,12 +94,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
@@ -104,9 +112,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a href="https://www.monash.edu/data-fluency/home" class="navbar-brand navbar-brand-logo">
     <img src="../../workshop/logo.png" alt="Monash Data Fluency" class="navbar-logo">
     </a>
@@ -121,32 +129,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../workshop/index.html" rel="" target="">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link" href="../../workshop/index.html"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../workshop/halfday.html" rel="" target="">
- <span class="menu-text">Half Day Workshop</span></a>
+    <a class="nav-link" href="../../workshop/halfday.html"> 
+<span class="menu-text">Half Day Workshop</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../workshop/fullday.html" rel="" target="">
- <span class="menu-text">Full Day Workshop</span></a>
+    <a class="nav-link" href="../../workshop/fullday.html"> 
+<span class="menu-text">Full Day Workshop</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../workshop/modules/intro.html">Modules</a></li><li class="breadcrumb-item"><a href="../../workshop/modules/working_with_data.html">Data analysis in Python with Pandas</a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../workshop/modules/intro.html">Modules</a></li><li class="breadcrumb-item"><a href="../../workshop/modules/working_with_data.html">Data analysis in Python with Pandas</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -155,7 +163,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
@@ -231,7 +239,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -279,12 +287,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/MonashDataFluency/python-workshop-base/edit/main/workshop/modules/working_with_data.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/MonashDataFluency/python-workshop-base/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/MonashDataFluency/python-workshop-base/edit/main/workshop/modules/working_with_data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/MonashDataFluency/python-workshop-base/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../workshop/modules/intro.html">Modules</a></li><li class="breadcrumb-item"><a href="../../workshop/modules/working_with_data.html">Data analysis in Python with Pandas</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Data analysis in Python with Pandas</h1>
 </div>
@@ -299,7 +307,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
+
 </header>
+
 
 <hr>
 <section id="instructor-notes" class="level2">
@@ -333,19 +343,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="the-dataset">The Dataset</h3>
 <p>For this lesson, we will be using the Portal Teaching data, a subset of the data from Ernst et al <a href="http://www.esapubs.org/archive/ecol/E090/118/default.htm">Long-term monitoring and experimental manipulation of a Chihuahuan Desert ecosystem near Portal, Arizona, USA</a></p>
 <p>We will be using this dataset, which can be downloaded here: <a href="data/surveys.csv">surveys.csv</a> … but <strong>don’t click</strong> to download it in your browser - <strong>we are going to use Python !</strong></p>
-<div class="cell" data-execution_count="1">
+<div id="6c69617a" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> urllib.request</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># You can also get this URL value by right-clicking the `surveys.csv` link above and selecting "Copy Link Address"</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">'https://monashdatafluency.github.io/python-workshop-base/modules/data/surveys.csv'</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># url = 'https://goo.gl/9ZxqBg'  # or a shortened version to save typing</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>urllib.request.urlretrieve(url, <span class="st">'surveys.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="1">
-<pre><code>('surveys.csv', &lt;http.client.HTTPMessage at 0x7f1c08685c90&gt;)</code></pre>
+<pre><code>('surveys.csv', &lt;http.client.HTTPMessage at 0x7f83bca0b9a0&gt;)</code></pre>
 </div>
 </div>
 <p>If Jupyter is running locally on your computer, you’ll now have a file <code>surveys.csv</code> in the current working directory. You can check by clicking on <code>File</code> tab on the top left of the notebook to see if the file exists. If you are running Jupyter on a remote server or cloud service (eg Colaboratory or Azure Notebooks), the file will be there instead.</p>
 <p>We are studying the species and weight of animals caught in plots in our study area. The dataset is stored as a <code>.csv</code> file: each row holds information for a single animal, and the columns represent:</p>
-<table class="table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th>Column</th>
@@ -414,26 +424,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="pandas-in-python">Pandas in Python</h2>
 <p>The dataset we have, is in table format. One of the best options for working with tabular data in Python is to use the <a href="http://pandas.pydata.org/">Python Data Analysis Library</a> (a.k.a. Pandas). The Pandas library provides data structures, produces high quality plots with <a href="http://matplotlib.org/">matplotlib</a> and integrates nicely with other libraries that use <a href="http://www.numpy.org/">NumPy</a> (which is another Python library) arrays.</p>
 <p>First, lets make sure the Pandas and matplotlib packages are <strong>installed</strong>.</p>
-<div class="cell" data-execution_count="2">
+<div id="af10e608" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install pandas matplotlib</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Requirement already satisfied: pandas in /home/perry/.conda/envs/python-workshop/lib/python3.10/site-packages (1.4.0)
-Requirement already satisfied: matplotlib in /home/perry/.conda/envs/python-workshop/lib/python3.10/site-packages (3.7.1)
-Requirement already satisfied: python-dateutil&gt;=2.8.1 in /home/perry/.conda/envs/python-workshop/lib/python3.10/site-packages (from pandas) (2.8.2)
-Requirement already satisfied: pytz&gt;=2020.1 in /home/perry/.conda/envs/python-workshop/lib/python3.10/site-packages (from pandas) (2023.3)
-Requirement already satisfied: numpy&gt;=1.21.0 in /home/perry/.conda/envs/python-workshop/lib/python3.10/site-packages (from pandas) (1.24.2)
-Requirement already satisfied: kiwisolver&gt;=1.0.1 in /home/perry/.conda/envs/python-workshop/lib/python3.10/site-packages (from matplotlib) (1.4.4)
-Requirement already satisfied: pyparsing&gt;=2.3.1 in /home/perry/.conda/envs/python-workshop/lib/python3.10/site-packages (from matplotlib) (3.0.9)
-Requirement already satisfied: contourpy&gt;=1.0.1 in /home/perry/.conda/envs/python-workshop/lib/python3.10/site-packages (from matplotlib) (1.0.7)
-Requirement already satisfied: pillow&gt;=6.2.0 in /home/perry/.conda/envs/python-workshop/lib/python3.10/site-packages (from matplotlib) (9.4.0)
-Requirement already satisfied: cycler&gt;=0.10 in /home/perry/.conda/envs/python-workshop/lib/python3.10/site-packages (from matplotlib) (0.11.0)
-Requirement already satisfied: packaging&gt;=20.0 in /home/perry/.conda/envs/python-workshop/lib/python3.10/site-packages (from matplotlib) (23.0)
-Requirement already satisfied: fonttools&gt;=4.22.0 in /home/perry/.conda/envs/python-workshop/lib/python3.10/site-packages (from matplotlib) (4.39.3)
-Requirement already satisfied: six&gt;=1.5 in /home/perry/.conda/envs/python-workshop/lib/python3.10/site-packages (from python-dateutil&gt;=2.8.1-&gt;pandas) (1.16.0)</code></pre>
+<pre><code>Requirement already satisfied: pandas in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (2.2.2)
+Requirement already satisfied: matplotlib in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (3.9.0)
+Requirement already satisfied: numpy&gt;=1.22.4 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from pandas) (2.0.0)
+Requirement already satisfied: python-dateutil&gt;=2.8.2 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from pandas) (2.9.0.post0)
+Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from pandas) (2024.1)
+Requirement already satisfied: tzdata&gt;=2022.7 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from pandas) (2024.1)
+Requirement already satisfied: contourpy&gt;=1.0.1 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from matplotlib) (1.2.1)
+Requirement already satisfied: cycler&gt;=0.10 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from matplotlib) (0.12.1)
+Requirement already satisfied: fonttools&gt;=4.22.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from matplotlib) (4.53.0)
+Requirement already satisfied: kiwisolver&gt;=1.3.1 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from matplotlib) (1.4.5)
+Requirement already satisfied: packaging&gt;=20.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from matplotlib) (24.1)
+Requirement already satisfied: pillow&gt;=8 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from matplotlib) (10.3.0)
+Requirement already satisfied: pyparsing&gt;=2.3.1 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from matplotlib) (3.1.2)
+Requirement already satisfied: six&gt;=1.5 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas) (1.16.0)
+
+[notice] A new release of pip is available: 24.1 -&gt; 24.1.1
+[notice] To update, run: pip install --upgrade pip</code></pre>
 </div>
 </div>
 <p>Python doesn’t load all of the libraries available to it by default. We have to add an <code>import</code> statement to our code in order to use library functions. To import a library, we use the syntax <code>import libraryName</code>. If we want to give the library a nickname to shorten the command, we can add <code>as nickNameHere</code>. An example of importing the pandas library using the common nickname <code>pd</code> is below.</p>
-<div class="cell" data-execution_count="3">
+<div id="49ae3d6b" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Each time we call a function that’s in a library, we use the syntax <code>LibraryName.FunctionName</code>. Adding the library name with a <code>.</code> before the function name tells Python where to find the function. In the example above, we have imported Pandas as <code>pd</code>. This means we don’t have to type out <code>pandas</code> each time we call a Pandas function.</p>
@@ -445,14 +459,14 @@ Requirement already satisfied: six&gt;=1.5 in /home/perry/.conda/envs/python-wor
 <section id="so-whats-a-dataframe" class="level2">
 <h2 class="anchored" data-anchor-id="so-whats-a-dataframe">So What’s a DataFrame?</h2>
 <p>A DataFrame is a 2-dimensional data structure that can store data of different types (including characters, integers, floating point values, factors and more) in columns. It is similar to a spreadsheet or an SQL table or the <code>data.frame</code> in R. A DataFrame always has an index (0-based). An index refers to the position of an element in the data structure.</p>
-<div class="cell" data-execution_count="4">
+<div id="f3544c29" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Note that pd.read_csv is used because we imported pandas as pd</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>pd.read_csv(<span class="st">"surveys.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <div>
 
 
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -610,17 +624,17 @@ Requirement already satisfied: six&gt;=1.5 in /home/perry/.conda/envs/python-wor
 <p>The above command outputs a <code>DateFrame</code> object, which Jupyter displays as a table (snipped in the middle since there are many rows).</p>
 <p>We can see that there were 33,549 rows parsed. Each row has 9 columns. The first column is the index of the DataFrame. The index is used to identify the position of the data, but it is not an actual column of the DataFrame. It looks like the <code>read_csv</code> function in Pandas read our file properly. However, we haven’t saved any data to memory so we can work with it.We need to assign the DataFrame to a variable. Remember that a variable is a name for a value, such as <code>x</code>, or <code>data</code>. We can create a new object with a variable name by assigning a value to it using <code>=</code>.</p>
 <p>Let’s call the imported survey data <code>surveys_df</code>:</p>
-<div class="cell" data-execution_count="5">
+<div id="3c955b6a" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>surveys_df <span class="op">=</span> pd.read_csv(<span class="st">"surveys.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Notice when you assign the imported DataFrame to a variable, Python does not produce any output on the screen. We can view the value of the <code>surveys_df</code> object by typing its name into the cell.</p>
-<div class="cell" data-execution_count="6">
+<div id="70eff345" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>surveys_df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <div>
 
 
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -779,13 +793,13 @@ Requirement already satisfied: six&gt;=1.5 in /home/perry/.conda/envs/python-wor
 <p>You can also select just a few rows, so it is easier to fit on one window, you can see that pandas has neatly formatted the data to fit our screen.</p>
 <p>Here, we will be using a function called <strong>head</strong>.</p>
 <p>The <code>head()</code> function displays the first several lines of a file. It is discussed below.</p>
-<div class="cell" data-execution_count="7">
+<div id="2b4399f5" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>surveys_df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
 <div>
 
 
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -871,7 +885,7 @@ Requirement already satisfied: six&gt;=1.5 in /home/perry/.conda/envs/python-wor
 <section id="exploring-our-species-survey-data" class="level2">
 <h2 class="anchored" data-anchor-id="exploring-our-species-survey-data">Exploring Our Species Survey Data</h2>
 <p>Again, we can use the <code>type</code> function to see what kind of thing <code>surveys_df</code> is:</p>
-<div class="cell" data-execution_count="8">
+<div id="edae74ff" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(surveys_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="8">
 <pre><code>pandas.core.frame.DataFrame</code></pre>
@@ -879,7 +893,7 @@ Requirement already satisfied: six&gt;=1.5 in /home/perry/.conda/envs/python-wor
 </div>
 <p>As expected, it’s a DataFrame (or, to use the full name that Python uses to refer to it internally, a <code>pandas.core.frame.DataFrame</code>).</p>
 <p>What kind of things does <code>surveys_df</code> contain? DataFrames have an attribute called <code>dtypes</code> that answers this:</p>
-<div class="cell" data-execution_count="9">
+<div id="d20b1b31" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>surveys_df.dtypes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
 <pre><code>record_id            int64
@@ -922,7 +936,7 @@ dtype: object</code></pre>
 <h1>Calculating Statistics From Data</h1>
 <p>We’ve read our data into Python. Next, let’s perform some quick summary statistics to learn more about the data that we’re working with. We might want to know how many animals were collected in each plot, or how many of each species were caught. We can perform summary stats quickly using groups. But first we need to figure out what we want to group by.</p>
 <p>Let’s begin by exploring our data:</p>
-<div class="cell" data-execution_count="10">
+<div id="1e54ace8" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Look at the column names</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>surveys_df.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="10">
@@ -932,7 +946,7 @@ dtype: object</code></pre>
 </div>
 </div>
 <p>Let’s get a list of all the species. The <code>pd.unique</code> function tells us all of the unique values in the <code>species_id</code> column.</p>
-<div class="cell" data-execution_count="11">
+<div id="149972af" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>pd.unique(surveys_df[<span class="st">'species_id'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="11">
 <pre><code>array(['NL', 'DM', 'PF', 'PE', 'DS', 'PP', 'SH', 'OT', 'DO', 'OX', 'SS',
@@ -951,7 +965,7 @@ dtype: object</code></pre>
 </section>
 <section id="solution---statistics" class="level2">
 <h2 class="anchored" data-anchor-id="solution---statistics">Solution - Statistics</h2>
-<div class="cell" data-tags="[&quot;solution&quot;]" data-execution_count="12">
+<div id="5306cff3" class="cell" data-tags="[&quot;solution&quot;]" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>site_names <span class="op">=</span> pd.unique(surveys_df[<span class="st">'site_id'</span>])</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(site_names), surveys_df[<span class="st">'site_id'</span>].nunique())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -964,7 +978,7 @@ dtype: object</code></pre>
 <h1>Groups in Pandas</h1>
 <p>We often want to calculate summary statistics grouped by subsets or attributes within fields of our data. For example, we might want to calculate the average weight of all individuals per site.</p>
 <p>We can calculate basic statistics for all records in a single column using the syntax below:</p>
-<div class="cell" data-execution_count="13">
+<div id="260661c9" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>surveys_df[<span class="st">'weight'</span>].describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="13">
 <pre><code>count    32283.000000
@@ -979,7 +993,7 @@ Name: weight, dtype: float64</code></pre>
 </div>
 </div>
 <p>We can also extract one specific metric if we wish:</p>
-<div class="cell" data-execution_count="14">
+<div id="25d1e1c1" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>surveys_df[<span class="st">'weight'</span>].<span class="bu">min</span>()</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>surveys_df[<span class="st">'weight'</span>].<span class="bu">max</span>()</span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>surveys_df[<span class="st">'weight'</span>].mean()</span>
@@ -987,27 +1001,27 @@ Name: weight, dtype: float64</code></pre>
 <span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="co"># only the last command shows output below - you can try the others above in new cells</span></span>
 <span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>surveys_df[<span class="st">'weight'</span>].count()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="14">
-<pre><code>32283</code></pre>
+<pre><code>np.int64(32283)</code></pre>
 </div>
 </div>
 <p>But if we want to summarize by one or more variables, for example sex, we can use <strong>Pandas’ <code>.groupby</code> method</strong>. Once we’ve created a groupby DataFrame, we can quickly calculate summary statistics by a group of our choice.</p>
-<div class="cell" data-execution_count="15">
+<div id="0bbcb827" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Group data by sex</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>grouped_data <span class="op">=</span> surveys_df.groupby(<span class="st">'sex'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The <strong>pandas function <code>describe</code></strong> will return descriptive stats including: mean, median, max, min, std and count for a particular column in the data. <strong>Note</strong> Pandas’ <code>describe</code> function will only return summary values for columns containing numeric data.</p>
-<div class="cell" data-execution_count="16">
+<div id="f0e2b890" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Summary statistics for all numeric columns by sex</span></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>grouped_data.describe()</span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Provide the mean for each numeric column by sex</span></span>
 <span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="co"># As above, only the last command shows output below - you can try the others above in new cells</span></span>
-<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>grouped_data.mean()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>grouped_data.mean(numeric_only<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="16">
 <div>
 
 
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -1086,14 +1100,14 @@ Name: weight, dtype: float64</code></pre>
 </section>
 <section id="solution--summary-data" class="level2">
 <h2 class="anchored" data-anchor-id="solution--summary-data">Solution- Summary Data</h2>
-<div class="cell" data-tags="[&quot;solution&quot;]" data-execution_count="17">
+<div id="ccb2f952" class="cell" data-tags="[&quot;solution&quot;]" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Solution Challenge 1</span></span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>grouped_data.count()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="17">
 <div>
 
 
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -1150,14 +1164,14 @@ Name: weight, dtype: float64</code></pre>
 <section id="solution---challenge-2" class="level3">
 <h3 class="anchored" data-anchor-id="solution---challenge-2">Solution - Challenge 2</h3>
 <p>The mean value for each combination of site and sex is calculated. Remark that the mean does not make sense for each variable, so you can specify this column-wise: e.g.&nbsp;I want to know the last survey year, median foot-length and mean weight for each site/sex combination:</p>
-<div class="cell" data-tags="[&quot;solution&quot;]" data-execution_count="18">
+<div id="01f0733f" class="cell" data-tags="[&quot;solution&quot;]" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Solution- Challenge 3</span></span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>surveys_df.groupby([<span class="st">'site_id'</span>])[<span class="st">'weight'</span>].describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="18">
 <div>
 
 
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -1472,7 +1486,7 @@ Name: weight, dtype: float64</code></pre>
 <section id="quickly-creating-summary-counts-in-pandas" class="level2">
 <h2 class="anchored" data-anchor-id="quickly-creating-summary-counts-in-pandas">Quickly Creating Summary Counts in Pandas</h2>
 <p>Let’s next count the number of samples for each species. We can do this in a few ways, but we’ll use <code>groupby</code> combined with <strong>a <code>count()</code> method</strong>.</p>
-<div class="cell" data-execution_count="19">
+<div id="95d824c0" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Count the number of samples by species</span></span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>species_counts <span class="op">=</span> surveys_df.groupby(<span class="st">'species_id'</span>)[<span class="st">'record_id'</span>].count()</span>
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(species_counts)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1530,17 +1544,17 @@ Name: record_id, dtype: int64</code></pre>
 </div>
 </div>
 <p>Or, we can also count just the rows that have the species “DO”:</p>
-<div class="cell" data-execution_count="20">
+<div id="aeea30ff" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>surveys_df.groupby(<span class="st">'species_id'</span>)[<span class="st">'record_id'</span>].count()[<span class="st">'DO'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="20">
-<pre><code>3027</code></pre>
+<pre><code>np.int64(3027)</code></pre>
 </div>
 </div>
 </section>
 <section id="basic-math-functions" class="level2">
 <h2 class="anchored" data-anchor-id="basic-math-functions">Basic Math Functions</h2>
 <p>If we wanted to, we could perform math on an entire column of our data. For example let’s multiply all weight values by 2. A more practical use of this might be to normalize the data according to a mean, area, or some other value calculated from our data.</p>
-<div class="cell" data-execution_count="21">
+<div id="eb0ee21c" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Multiply all weight values by 2 but does not change the original weight data</span></span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>surveys_df[<span class="st">'weight'</span>]<span class="op">*</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="21">
@@ -1562,31 +1576,33 @@ Name: weight, Length: 35549, dtype: float64</code></pre>
 <section id="quick-easy-plotting-data-using-pandas" class="level2">
 <h2 class="anchored" data-anchor-id="quick-easy-plotting-data-using-pandas">Quick &amp; Easy Plotting Data Using Pandas</h2>
 <p>We can plot our summary stats using Pandas, too.</p>
-<div class="cell" data-execution_count="22">
+<div id="5d75d7aa" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co">## To make sure figures appear inside Jupyter Notebook</span></span>
 <span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib inline</span>
 <span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a quick bar chart</span></span>
 <span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>species_counts.plot(kind<span class="op">=</span><span class="st">'bar'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="22">
-<pre><code>&lt;Axes: xlabel='species_id'&gt;</code></pre>
-</div>
 <div class="cell-output cell-output-display">
-<p><img src="working_with_data_files/figure-html/cell-23-output-2.png" width="593" height="438"></p>
+<div>
+<figure class="figure">
+<p><img src="working_with_data_files/figure-html/cell-23-output-1.png" width="593" height="438" class="figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 <section id="animals-per-site-plot" class="level4">
 <h4 class="anchored" data-anchor-id="animals-per-site-plot">Animals per site plot</h4>
 <p>We can also look at how many animals were captured in each site.</p>
-<div class="cell" data-execution_count="23">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>total_count <span class="op">=</span> surveys_df.groupby(<span class="st">'site_id'</span>)[<span class="st">'record_id'</span>].nunique()</span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Let's plot that too</span></span>
-<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>total_count.plot(kind<span class="op">=</span><span class="st">'bar'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="23">
-<pre><code>&lt;Axes: xlabel='site_id'&gt;</code></pre>
-</div>
+<div id="8dddd0ba" class="cell" data-execution_count="23">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>total_count <span class="op">=</span> surveys_df.groupby(<span class="st">'site_id'</span>)[<span class="st">'record_id'</span>].nunique()</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Let's plot that too</span></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>total_count.plot(kind<span class="op">=</span><span class="st">'bar'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="working_with_data_files/figure-html/cell-24-output-2.png" width="583" height="433"></p>
+<div>
+<figure class="figure">
+<p><img src="working_with_data_files/figure-html/cell-24-output-1.png" width="583" height="433" class="figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
@@ -1600,38 +1616,40 @@ Name: weight, Length: 35549, dtype: float64</code></pre>
 </ol>
 <section id="solution-to-extra-plotting-challenge-1" class="level3">
 <h3 class="anchored" data-anchor-id="solution-to-extra-plotting-challenge-1"><em>Solution to Extra Plotting Challenge 1</em></h3>
-<div class="cell" data-tags="[&quot;solution&quot;]" data-execution_count="24">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Solution Plotting Challenge 1</span></span>
-<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>surveys_df.groupby(<span class="st">'site_id'</span>).mean()[<span class="st">"weight"</span>].plot(kind<span class="op">=</span><span class="st">'bar'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="24">
-<pre><code>&lt;Axes: xlabel='site_id'&gt;</code></pre>
-</div>
+<div id="e350b87e" class="cell" data-tags="[&quot;solution&quot;]" data-execution_count="24">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Solution Plotting Challenge 1</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>surveys_df.groupby(<span class="st">'site_id'</span>).mean(numeric_only<span class="op">=</span><span class="va">True</span>)[<span class="st">"weight"</span>].plot(kind<span class="op">=</span><span class="st">'bar'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="working_with_data_files/figure-html/cell-25-output-2.png" width="566" height="433"></p>
+<div>
+<figure class="figure">
+<p><img src="working_with_data_files/figure-html/cell-25-output-1.png" width="566" height="433" class="figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
 <section id="solution-to-extra-plotting-challenge-2" class="level3">
 <h3 class="anchored" data-anchor-id="solution-to-extra-plotting-challenge-2"><em>Solution to Extra Plotting Challenge 2</em></h3>
-<div class="cell" data-tags="[&quot;solution&quot;]" data-execution_count="25">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Solution Plotting Challenge 2</span></span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="co">## Create plot of total males versus total females for the entire dataset.</span></span>
-<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>surveys_df.groupby(<span class="st">'sex'</span>).count()[<span class="st">"record_id"</span>].plot(kind<span class="op">=</span><span class="st">'bar'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="25">
-<pre><code>&lt;Axes: xlabel='sex'&gt;</code></pre>
-</div>
+<div id="19d2b3f1" class="cell" data-tags="[&quot;solution&quot;]" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Solution Plotting Challenge 2</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="co">## Create plot of total males versus total females for the entire dataset.</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>surveys_df.groupby(<span class="st">'sex'</span>).count()[<span class="st">"record_id"</span>].plot(kind<span class="op">=</span><span class="st">'bar'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="working_with_data_files/figure-html/cell-26-output-2.png" width="592" height="428"></p>
+<div>
+<figure class="figure">
+<p><img src="working_with_data_files/figure-html/cell-26-output-1.png" width="592" height="428" class="figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
 <section id="solution-to-extra-plotting-challenge-3" class="level3">
 <h3 class="anchored" data-anchor-id="solution-to-extra-plotting-challenge-3"><em>Solution to Extra Plotting Challenge 3</em></h3>
 <p>First we group data by site and by sex, and then calculate a total for each site.</p>
-<div class="cell" data-tags="[&quot;solution&quot;]" data-execution_count="26">
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>by_site_sex <span class="op">=</span> surveys_df.groupby([<span class="st">'site_id'</span>,<span class="st">'sex'</span>])</span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>site_sex_count <span class="op">=</span> by_site_sex[<span class="st">'weight'</span>].<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="ea35b4ce" class="cell" data-tags="[&quot;solution&quot;]" data-execution_count="26">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>by_site_sex <span class="op">=</span> surveys_df.groupby([<span class="st">'site_id'</span>,<span class="st">'sex'</span>])</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>site_sex_count <span class="op">=</span> by_site_sex[<span class="st">'weight'</span>].<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This calculates the sums of weights for each sex within each plot as a table</p>
 <pre><code>site  sex
@@ -1646,15 +1664,15 @@ site_id  sex
          M      49377
 &lt;other sites removed for brevity&gt;</code></pre>
 <p>Below we’ll use <code>.unstack()</code> on our grouped data to figure out the total weight that each sex contributed to each plot.</p>
-<div class="cell" data-tags="[&quot;solution&quot;]" data-execution_count="27">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>by_site_sex <span class="op">=</span> surveys_df.groupby([<span class="st">'site_id'</span>,<span class="st">'sex'</span>])</span>
-<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>site_sex_count <span class="op">=</span> by_site_sex[<span class="st">'weight'</span>].<span class="bu">sum</span>()</span>
-<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>site_sex_count.unstack()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="5d617d37" class="cell" data-tags="[&quot;solution&quot;]" data-execution_count="27">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>by_site_sex <span class="op">=</span> surveys_df.groupby([<span class="st">'site_id'</span>,<span class="st">'sex'</span>])</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>site_sex_count <span class="op">=</span> by_site_sex[<span class="st">'weight'</span>].<span class="bu">sum</span>()</span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>site_sex_count.unstack()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="27">
 <div>
 
 
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th">sex</th>
@@ -1796,18 +1814,22 @@ site_id  sex
 </div>
 <p>Now, create a stacked bar plot with that data where the weights for each sex are stacked by plot.</p>
 <p>Rather than display it as a table, we can plot the above data by stacking the values of each sex as follows:</p>
-<div class="cell" data-tags="[&quot;solution&quot;]" data-execution_count="28">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>by_site_sex <span class="op">=</span> surveys_df.groupby([<span class="st">'site_id'</span>, <span class="st">'sex'</span>])</span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>site_sex_count <span class="op">=</span> by_site_sex[<span class="st">'weight'</span>].<span class="bu">sum</span>()</span>
-<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>spc <span class="op">=</span> site_sex_count.unstack()</span>
-<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>s_plot <span class="op">=</span> spc.plot(kind<span class="op">=</span><span class="st">'bar'</span>, stacked<span class="op">=</span><span class="va">True</span>, title<span class="op">=</span><span class="st">"Total weight by site and sex"</span>)</span>
-<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>s_plot.set_ylabel(<span class="st">"Weight"</span>)</span>
-<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a>s_plot.set_xlabel(<span class="st">"Site"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="23529bc1" class="cell" data-tags="[&quot;solution&quot;]" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>by_site_sex <span class="op">=</span> surveys_df.groupby([<span class="st">'site_id'</span>, <span class="st">'sex'</span>])</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>site_sex_count <span class="op">=</span> by_site_sex[<span class="st">'weight'</span>].<span class="bu">sum</span>()</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>spc <span class="op">=</span> site_sex_count.unstack()</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>s_plot <span class="op">=</span> spc.plot(kind<span class="op">=</span><span class="st">'bar'</span>, stacked<span class="op">=</span><span class="va">True</span>, title<span class="op">=</span><span class="st">"Total weight by site and sex"</span>)</span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>s_plot.set_ylabel(<span class="st">"Weight"</span>)</span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a>s_plot.set_xlabel(<span class="st">"Site"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="28">
 <pre><code>Text(0.5, 0, 'Site')</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="working_with_data_files/figure-html/cell-29-output-2.png" width="619" height="453"></p>
+<div>
+<figure class="figure">
+<p><img src="working_with_data_files/figure-html/cell-29-output-2.png" width="618" height="453" class="figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 
@@ -1896,10 +1918,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/pansapiens\.github\.io\/python-workshop-base\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1909,8 +1948,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1922,7 +1970,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1966,6 +2137,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1991,6 +2163,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -2054,4 +2252,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/MonashDataFluency/python-workshop-base/edit/main/workshop/modules/working_with_data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/MonashDataFluency/python-workshop-base/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
