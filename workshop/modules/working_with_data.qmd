@@ -334,7 +334,7 @@ grouped_data.describe()
 
 # Provide the mean for each numeric column by sex
 # As above, only the last command shows output below - you can try the others above in new cells
-grouped_data.mean()
+grouped_data.mean(numeric_only=True)
 ```
 
 The `groupby` command is powerful in that it allows us to quickly generate
@@ -460,7 +460,7 @@ total_count.plot(kind='bar')
 ```{python}
 #| tags: [solution]
 ## Solution Plotting Challenge 1
-surveys_df.groupby('site_id').mean()["weight"].plot(kind='bar')
+surveys_df.groupby('site_id').mean(numeric_only=True)["weight"].plot(kind='bar')
 ```
 
 ### _Solution to Extra Plotting Challenge 2_

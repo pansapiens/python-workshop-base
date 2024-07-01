@@ -8,7 +8,6 @@ workshop/_build
 /workshop/modules/speciesSubset.csv
 /workshop/modules/function_surveys*.csv
 /workshop/modules/data/function_surveys*.csv
-/workshop/modules/output/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
