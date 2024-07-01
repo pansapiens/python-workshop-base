@@ -304,93 +304,39 @@ create_csvs_by_year(1977, 2002, surveys_df)
 
 ## Challenge - More Functions
 
-1. How could you use the function `create_csvs_by_year` to create a CSV file for only one year ? (Hint: think about the syntax for range)
+Here's our `year_to_csv` function (without comments and the docstring):
 
-2. Modify `year_to_csv` so that it has two additional arguments, `output_path` (the path of the directory where the files will be written) and `filename_prefix` (a prefix to be added to the start of the file name). Name your new function `year_to_csv_at_path`. Eg, `def year_to_csv_at_path(year, all_data, output_path, filename_prefix):`. Call your new function to create a new file with a different name in a different directory. ... **Hint:** You could manually create the target directory before calling the function using the Collaboratory / Jupyter file browser, *or* for bonus points you could do it in Python inside the function using the `os` module.
+```{python}
+def year_to_csv(year, all_data):
+    surveys_year = all_data[all_data.year == year]
+    filename = 'function_surveys' + str(year) + '.csv'
+    surveys_year.to_csv(f"./data/{filename}")
+```
 
-3. Create a new version of the `create_csvs_by_year` function called `create_csvs_by_year_at_path` that also takes the additional arguments `output_path` and `filename_prefix`. Internally `create_csvs_by_year_at_path` should pass these values to `year_to_csv_at_path`. Call your new function to create a new set of files with a different name in a different directory.
+1. How could you modify the function `create_csvs_by_year` to output the CSV file for only one year ? Make sure you name your modified version something different.
 
-4. Make these new functions return a list of the files they have written. There are many ways you can do this (and you should try them all!): you could make the function print the filenames to screen, or you could use a `return` statement to make the function produce a list of filenames, or you can use some combination of the two. You could also try using the `os` library to list the contents of directories.
+2. The output from `year_to_csv` always starts with `'function_surveys'`. `Modify `year_to_csv` so that you can set the output filename to whatever you want. Name your new function `year_to_csv_at_path`. Eg, `def year_to_csv_file(year, all_data, filename):`. 
+   Test your new function - does it work ?
 
 ## Solutions - More Functions
 
 ```{python}
 #| tags: [solution]
 # Solution - part 1
-create_csvs_by_year(2002, 2002, surveys_df)
+
+def create_csvs_by_year(year, all_data):
+    year_to_csv(year, all_data)
 ```
 
 ```{python}
 #| tags: [solution]
-# Solution - part 2 and 3
-import os
+# Solution - part 2
 
-def year_to_csv_at_path(year, all_data, output_path, filename_prefix):
-    """
-    Writes a csv file for data from a given year.
-
-    year --- year for which data is extracted
-    all_data --- DataFrame with multi-year data
-    output_path --- The output path for the generated file
-    filename_prefix --- Output filename will be of the form "{filename_prefix}{year}.csv"
-    """
-
-    # Select data for the year
+def year_to_csv(year, all_data, filename):
     surveys_year = all_data[all_data.year == year]
-
-    # Create directories if required
-    if not os.path.exists(output_path):
-        os.makedirs(output_path)
-    
-    # Write the new DataFrame to a csv file
-    filename = output_path + '/' + filename_prefix + str(year) + '.csv'
-    surveys_year.to_csv(filename)
-
-def create_csvs_by_year_at_path(start_year, end_year, all_data, output_path, filename_prefix):
-    """
-    Writes separate CSV files for each year of data.
-
-    start_year --- the first year of data we want
-    end_year --- the last year of data we want
-    all_data --- DataFrame with multi-year data
-    output_path --- The output path for the generated file
-    filename_prefix --- Output filename will be of the form "{filename_prefix}{year}.csv"
-    """
-
-    # "end_year" is the last year of data we want to pull, so we loop to end_year+1
-    for year in range(start_year, end_year+1):
-        year_to_csv_at_path(year, all_data, output_path, filename_prefix)
+    surveys_year.to_csv(f"./data/{filename}")
 ```
 
-```{python}
-#| tags: [solution]
-# Solution - part 4
-
-def year_to_csv_return_filenames(year, all_data):
-    # Select data for the year
-    surveys_year = all_data[all_data.year == year]
-
-    # Write the new DataFrame to a csv fileoutput_path
-    filename = 'function_surveys' + str(year) + '.csv'
-    surveys_year.to_csv(filename)
-    
-    # We could just print the filename. We can see the result, but won't capture the value
-    # print(filename)
-    
-    # It's often more useful to return data rather than print it, so we can do something with it
-    return filename
-
-def create_csvs_by_year_return_filenames(start_year, end_year, all_data):
-    
-    generated_files = []
-    for year in range(start_year, end_year+1):
-        fn = year_to_csv_return_filenames(year, all_data)
-        generated_files.append(fn)
-        
-    return generated_files
-
-print(create_csvs_by_year_return_filenames(2000, 2002, surveys_df))
-```
 
 The functions we wrote demand that we give them a value for every argument. Ideally, we would like these functions to be as flexible and independent as possible. Let’s modify the function `create_csvs_by_year` so that the `start_year` and `end_year` default to the full range of the data if they are not supplied by the user. 
 
