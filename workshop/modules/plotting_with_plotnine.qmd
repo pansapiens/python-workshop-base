@@ -303,7 +303,7 @@ bins = [(survs_df['year'] < 1980),
 
 labels = ['70s', '80s', '90s', 'Z']
 
-survs_df['year_bins'] = np.select(bins, labels)
+survs_df['year_bins'] = np.select(bins, labels, default='unknown')
 ```
 
 ```{python}
